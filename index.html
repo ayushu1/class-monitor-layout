@@ -15,6 +15,8 @@
       padding: 8px;
       text-align: center;
       word-wrap: break-word; /* prevent overflow */
+      vertical-align: middle; /* align text vertically */
+      height: 60px; /* fixed row height (can adjust as needed) */
     }
     /* Column widths */
     colgroup col:nth-child(1),
@@ -26,6 +28,15 @@
     colgroup col:nth-child(3),
     colgroup col:nth-child(4) {
       width: 30%;
+    }
+
+    /* Responsive: scale text if screen is very small */
+    @media (max-width: 600px) {
+      th, td {
+        font-size: 12px;
+        padding: 4px;
+        height: 40px;
+      }
     }
   </style>
 </head>
