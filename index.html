@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Table</title>
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed; /* ensures % widths are respected */
+    }
+    th, td {
+      border: 1px solid #333;
+      padding: 8px;
+      text-align: center;
+      word-wrap: break-word; /* prevent overflow */
+    }
+    /* Column widths */
+    colgroup col:nth-child(1),
+    colgroup col:nth-child(2),
+    colgroup col:nth-child(5),
+    colgroup col:nth-child(6) {
+      width: 10%;
+    }
+    colgroup col:nth-child(3),
+    colgroup col:nth-child(4) {
+      width: 30%;
+    }
+  </style>
+</head>
+<body>
+
+  <table>
+    <colgroup>
+      <col>
+      <col>
+      <col>
+      <col>
+      <col>
+      <col>
+    </colgroup>
+    <thead>
+      <tr>
+        <th>Col 1</th>
+        <th>Col 2</th>
+        <th>Col 3</th>
+        <th>Col 4</th>
+        <th>Col 5</th>
+        <th>Col 6</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>10%</td>
+        <td>10%</td>
+        <td>30%</td>
+        <td>30%</td>
+        <td>10%</td>
+        <td>10%</td>
+      </tr>
+      <tr>
+        <td>Small</td>
+        <td>Data</td>
+        <td>This is wider</td>
+        <td>Also wider</td>
+        <td>Info</td>
+        <td>End</td>
+      </tr>
+    </tbody>
+  </table>
+
+</body>
+</html>
